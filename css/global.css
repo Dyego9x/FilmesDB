@@ -1,0 +1,181 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.body {
+    background-color: #4d4e4f;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+}
+
+/* Nav Menu */
+
+
+
+/* Nav Menu */
+
+
+
+.back_white {
+    background-color: white;
+}
+
+.titulo {
+    font-family: "Poppins", "Roboto", sans-serif;   
+}
+
+#li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex_r {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80%;
+    margin: auto;
+}
+
+.efeito_gradient_nav {
+    background-image: linear-gradient(to right, #1a75be , #1A1A1A);
+}
+
+.gradient_font {
+
+    background-image: linear-gradient(to bottom, #063372, #3c79ce, #0747a1);
+    
+    background-clip: text;
+    -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+    -webkit-text-fill-color: transparent;
+
+    /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+    color: black;
+    
+}
+
+.background_escuro {
+    background-color: #1A1A1A ;
+}
+
+.azul_padrao {
+    color: #0747a1;
+}
+
+.f_fantasy {
+    font-family: fantasy;
+}
+
+.img_destaques {
+    width: 220px;
+    height: 330px;
+    border-radius: 5px;
+}
+
+.imagem_principal {
+    width: 400px;
+    height: 330px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.menu {
+    border-top: 1px solid #0747a1;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    color: #FFF;
+    background: #0747a1; 
+    text-decoration: none;
+    border-radius: 0px 0px 6px 6px;
+}
+
+.container_melhores {
+    margin-top: 40px;
+    margin-left: 20px;
+    color: #4d4e4f;
+
+}
+
+.center {
+    text-align: center;
+}
+
+.op_filtros {
+    margin-top: 40px;
+    margin-left: 15%; 
+    width: 60%;       
+    text-align: center;
+}
+
+.input {
+    flex-direction: column;
+    padding: 8px;
+    padding-left: 30px;
+    background: #f3fafc;
+    border-radius: 25px;
+    margin-bottom: 10px;    
+    border: 1px solid #0FD4FF;
+    box-shadow: 0 0 10px 7px #0FD4FF(105, 81, 243, 0.4);
+}
+
+.input textarea {
+    background-color: rgb(250, 250, 250, 0);
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;  
+    color: #0747a1 !important;
+    font-size: 16px;
+    width: 100%;
+    height: 60px !important;
+}
+
+.input input, .input select {
+    background-color: rgb(250, 250, 250, 0);
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;  
+    color: #0747a1 !important;
+    font-size: 16px;
+    width: 100%;
+    height: 40px !important;
+}
+
+.input input::placeholder { 
+    color: #0747a1 !important;
+    opacity: 1;
+}
+
+.button {
+    padding: 15px;
+    width:100%;
+    border-radius: 48px;
+    margin-bottom: 10px;
+    background-color: #0FD4FF;    
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border: 1px solid #0FD4FF;   
+}
+
+.button:hover {
+    padding: 15px;
+    width:100%;
+    border-radius: 48px;
+    margin-bottom: 10px;
+    background-color: #0FD4FF;
+    border: 1px solid #0FD4FF; 
+    color: white;
+    font-size: 16px;
+}

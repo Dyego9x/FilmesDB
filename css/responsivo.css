@@ -1,0 +1,47 @@
+/* Atributos: Fontes */
+
+.font_20 {
+    font-size: 20px;
+}
+.font_30 {
+    font-size: 30px;
+}
+.font_60 {
+    font-size: 60px;
+}
+
+/* Atributos: Margin à esquerda */
+.m_40_l {
+    margin-left: 40px;
+}
+
+.m_20_l {
+    margin-left: 20px;
+}
+
+.m_25_l_p {
+    margin-left: 25%;
+}
+
+/* Atributos: Margin do topo */
+
+.m_40_t {
+    margin-top: 40px;
+}
+
+/* Atributos: Largura */
+.w_100 {
+    width: 100%;
+}
+
+.w_90 {
+    width: 90%;
+}
+
+.w_80 {
+    width: 80%;
+}
+
+.w_40 {
+    width: 40%;
+}
