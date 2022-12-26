@@ -96,7 +96,7 @@
                     
                         <div class="slider-content m_40_t m_25_l_p sinopse">
                             <div class="slider-item flex">
-                                <a href=""><img class="img_destaques" src="images/spy.jpg?v1" alt="Wandinha" title="Wandinha"></a>
+                                <a href=""><img class="img_destaques" src="images/spy.jpg?v1" alt="SpyxFamily" title="SpyxFamily"></a>
                                 <div class="m_40_l w_30">
                                     <p class="font_20"><strong>SPY×FAMILY (2022)</strong></p>
                                     <p class="font_15">Há décadas, as nações de Ostania e Westalis promovem uma guerra fria sem fim. Para investigar os movimentos do presidente de um importante partido político, Westalis mobiliza Twilight, seu melhor agente, a montar uma família falsa e se infiltrar nos eventos sociais promovidos pela escola do filho do político. Mas por um acaso do destino, Twilight acaba adotando Anya, uma jovem com poderes telepáticos, e se "casando" com Yor, uma assassina profissional! Sem saberem das identidades uns dos outros, este trio incomum vai embarcar em aventuras cheias de surpresas para garantir a paz mundial.</p>
@@ -110,14 +110,14 @@
                                 </div>
                             </div>
                             <div class="slider-item flex">
-                                <a href=""><img class="img_destaques" src="images/got.jpg?v1" alt="Wandinha" title="Wandinha"></a>
+                                <a href=""><img class="img_destaques" src="images/got.jpg?v1" alt="Game of Thrones" title="Game of Thrones"></a>
                                 <div class="m_40_l w_30">
                                     <p class="font_20"><strong>Game of Thrones (2011)</strong></p>
                                     <p class="font_15">Em uma terra onde os verões podem durar vários anos e o inverno toda uma vida, sete nobres famílias lutam pelo controle da mítica terra de Westeros, dividida depois de uma guerra. Num cenário que lembra a Europa medieval, reis, rainhas, cavaleiros e renegados usam todos os meios possíveis em um jogo político pela disputa do Trono de Ferro, o símbolo do poder absoluto.</p>
                                 </div>
                             </div>
                             <div class="slider-item flex">
-                                <a href=""><img class="img_destaques" src="images/adao.jpg?v1" alt="Wandinha" title="Wandinha"></a>
+                                <a href=""><img class="img_destaques" src="images/adao.jpg?v1" alt="Adão Negro" title="Adão Negro"></a>
                                 <div class="m_40_l w_30">
                                     <p class="font_20"><strong>Adão Negro (2022)</strong></p>
                                     <p class="font_15">Quase 5.000 anos depois de ter sido concedido com os poderes onipotentes dos deuses egípcios - e de ter sido preso, - Adão Negro se ergue de seu túmulo, pronto para trazer sua justiça ao mundo moderno.</p>
@@ -126,6 +126,180 @@
                         </div>
                     </section>
                 </div> 
+
+
+
+
+
+
+                <div>
+                    <p class="font_60 titulo gradient_font"> <strong>Tendências</strong></p>
+                </div>
+                <div class="m_40_t center flex">
+
+
+                    <!-- Filme -->
+                    
+                    <section class="slider_tendencia_filmes">     
+
+                        <div>
+                            <p class="font_20 titulo gradient_font"> <strong>Filmes</strong></p>
+                        </div>
+                        
+                        <input name='slide_tendencia_filmes' type="radio" checked>
+                        <input name='slide_tendencia_filmes' type="radio" >
+                        <input name='slide_tendencia_filmes' type="radio">
+                        <input name='slide_tendencia_filmes' type="radio">
+                    
+                        <div class="slider-content_tendencia_filmes m_40_t sinopse margin_auto">
+                            <div class="slider-item_tendencia_filmes ">
+                                <a href=""><img class="img_destaques" src="images/filmes/drestranho.jpg?v1" alt="Dr. Estranho" title="Dr. Estranho"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>Doutor Estranho no Multiverso da Loucura (2022)</strong></p>                                    
+                                </div>
+                            </div>
+                            <div class="slider-item_tendencia_filmes ">
+                                <a href=""><img class="img_destaques" src="images/filmes/minions.jpg?v1" alt="Minions 2: A Origem de Gru (2022)" title="Minions 2: A Origem de Gru (2022)"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>Minions 2: A Origem de Gru (2022)</strong></p>                                    
+                                </div>
+                            </div>
+                            <div class="slider-item_tendencia_filmes ">
+                                <a href=""><img class="img_destaques" src="images/filmes/ripd.jpg?v1" alt="R.I.P.D. 2: Rise of the Damned (2022)" title="R.I.P.D. 2: Rise of the Damned (2022)"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>R.I.P.D. 2: Rise of the Damned (2022)</strong></p>                                    
+                                </div>
+                            </div>
+                            <div class="slider-item_tendencia_filmes ">
+                                <a href=""><img class="img_destaques" src="images/adao.jpg?v1" alt="Avatar: O Caminho da Água (2022)" title="Avatar: O Caminho da Água (2022)"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>Avatar: O Caminho da Água (2022)</strong></p>                                    
+                                </div>
+                            </div>
+                        </div>                                                    
+                        
+                    </section>
+
+                    <!-- Filme -->
+
+                    <!-- Séries -->
+                    <section class="slider_tendencia_series">     
+
+                        <div>
+                            <p class="font_20 titulo gradient_font"> <strong>Séries</strong></p>
+                        </div>
+                        
+                        <input name='slide_tendencia_series' type="radio" checked>
+                        <input name='slide_tendencia_series' type="radio" >
+                        <input name='slide_tendencia_series' type="radio">
+                        <input name='slide_tendencia_series' type="radio">
+                    
+                        <div class="slider-content_tendencia_series m_40_t sinopse margin_auto">
+                            <div class="slider-item_tendencia_series ">
+                                <a href=""><img class="img_destaques" src="images/series/peak.jpg?v1" alt="Peaky Blinders: Sangue, Apostas e Navalhas (2013)" title="Peaky Blinders: Sangue, Apostas e Navalhas (2013)"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>Peaky Blinders: Sangue, Apostas e Navalhas (2013)</strong></p>                                    
+                                </div>
+                            </div>
+                            <div class="slider-item_tendencia_series ">
+                                <a href=""><img class="img_destaques" src="images/series/medicos.jpg?v1" alt="A Anatomia de Grey (2005)" title="A Anatomia de Grey (2005)"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>A Anatomia de Grey (2005)</strong></p>                                    
+                                </div>
+                            </div>
+                            <div class="slider-item_tendencia_series ">
+                                <a href=""><img class="img_destaques" src="images/series/traficante.jpg?v1" alt="Breaking Bad: A Química do Mal (2008)" title="Breaking Bad: A Química do Mal (2008)"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>Breaking Bad: A Química do Mal (2008)</strong></p>                                    
+                                </div>
+                            </div>
+                            <div class="slider-item_tendencia_series ">
+                                <a href=""><img class="img_destaques" src="images/series/dragao.jpg?v1" alt="A Casa do Dragão (2022)" title="A Casa do Dragão (2022)"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>A Casa do Dragão (2022)</strong></p>                                    
+                                </div>
+                            </div>
+                        </div>                                                    
+                        
+                    </section>
+
+                    <!-- Séries -->
+
+
+                    <!-- Animes -->
+                    <section class="slider_tendencia_animes">     
+                        
+                        <div>
+                            <p class="font_20 titulo gradient_font"> <strong>Animes</strong></p>
+                        </div>
+
+                        <input name='slide_tendencia_animes' type="radio" checked>
+                        <input name='slide_tendencia_animes' type="radio" >
+                        <input name='slide_tendencia_animes' type="radio">
+                        <input name='slide_tendencia_animes' type="radio">
+                    
+                        <div class="slider-content_tendencia_animes m_40_t sinopse margin_auto">
+                            <div class="slider-item_tendencia_animes">
+                                <a href=""><img class="img_destaques" src="images/animes/hunter.jpg?v1" alt="Hunter x Hunter (2011)" title="Hunter x Hunter (2011)"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>Hunter x Hunter (2011)</strong></p>                                    
+                                </div>
+                            </div>
+                            <div class="slider-item_tendencia_animes">
+                                <a href=""><img class="img_destaques" src="images/animes/blue.jpg?v1" alt="Blue Lock (2022)" title="Blue Lock (2022)"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>Blue Lock (2022)</strong></p>                                    
+                                </div>
+                            </div>
+                            <div class="slider-item_tendencia_animes">
+                                <a href=""><img class="img_destaques" src="images/animes/dragon.jpg?v1" alt="Super Dragon Ball Heroes (2018)" title="Super Dragon Ball Heroes (2018)"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>Super Dragon Ball Heroes (2018)</strong></p>                                    
+                                </div>
+                            </div>
+                            <div class="slider-item_tendencia_animes">
+                                <a href=""><img class="img_destaques" src="images/animes/motoserra.jpg?v1" alt="Chainsaw Man (2022)" title="Chainsaw Man (2022)"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>Chainsaw Man (2022)</strong></p>                                    
+                                </div>
+                            </div>
+                        </div>                                                    
+                        
+                    </section>
+
+                    <!-- Animes -->
+
+
+                </div>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <br><br><br><br><br><br><br><br><br>
                 <div class="m_40_t center">
                     <div>
                         <p class="font_60 titulo gradient_font"> <strong>Tendências</strong></p>

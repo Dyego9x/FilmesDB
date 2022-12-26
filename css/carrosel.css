@@ -31,14 +31,14 @@
 }
 
 
-/* tendência */
+/* tendência Filmes */
 
 
-.slider_tendencia{
+.slider_tendencia_filmes{
     overflow: hidden;
 
 }
-.slider_tendencia > .slider-content_tendencia{
+.slider_tendencia_filmes > .slider-content_tendencia_filmes{
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -46,22 +46,96 @@
 
 }
 
-.slider_tendencia > .slider-content_tendencia > .slider-item_tendencia {
+.slider_tendencia_filmes > .slider-content_tendencia_filmes > .slider-item_tendencia_filmes {
     flex: 0 0 auto;
     width: 100%;
 }
 
-.slider_tendencia > input:nth-child(1):checked ~ .slider-content_tendencia{
+.slider_tendencia_filmes > input:nth-child(1):checked ~ .slider-content_tendencia_filmes{
     transform: translateX(0%);
 }
 
-.slider_tendencia > input:nth-child(2):checked ~ .slider-content_tendencia{
+.slider_tendencia_filmes > input:nth-child(2):checked ~ .slider-content_tendencia_filmes{
     transform: translateX(-100%);
 }
-.slider_tendencia > input:nth-child(3):checked ~ .slider-content_tendencia{
+.slider_tendencia_filmes > input:nth-child(3):checked ~ .slider-content_tendencia_filmes{
     transform: translateX(-200%);
 }
 
-.slider_tendencia > input:nth-child(4):checked ~ .slider-content_tendencia{
+.slider_tendencia_filmes > input:nth-child(4):checked ~ .slider-content_tendencia_filmes{
+    transform: translateX(-300%);
+}
+
+
+
+/* tendência Séries */
+
+
+
+.slider_tendencia_series{
+    overflow: hidden;
+
+}
+.slider_tendencia_series > .slider-content_tendencia_series{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: all 500ms ease;
+
+}
+
+.slider_tendencia_series > .slider-content_tendencia_series > .slider-item_tendencia_series {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.slider_tendencia_series > input:nth-child(1):checked ~ .slider-content_tendencia_series{
+    transform: translateX(0%);
+}
+
+.slider_tendencia_series > input:nth-child(2):checked ~ .slider-content_tendencia_series{
+    transform: translateX(-100%);
+}
+.slider_tendencia_series > input:nth-child(3):checked ~ .slider-content_tendencia_series{
+    transform: translateX(-200%);
+}
+
+.slider_tendencia_series > input:nth-child(4):checked ~ .slider-content_tendencia_series{
+    transform: translateX(-300%);
+}
+
+
+
+/* tendência Animes */
+
+.slider_tendencia_animes{
+    overflow: hidden;
+
+}
+.slider_tendencia_animes > .slider-content_tendencia_animes{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    transition: all 500ms ease;
+
+}
+
+.slider_tendencia_animes > .slider-content_tendencia_animes > .slider-item_tendencia_animes {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.slider_tendencia_animes > input:nth-child(1):checked ~ .slider-content_tendencia_animes{
+    transform: translateX(0%);
+}
+
+.slider_tendencia_animes > input:nth-child(2):checked ~ .slider-content_tendencia_animes{
+    transform: translateX(-100%);
+}
+.slider_tendencia_animes > input:nth-child(3):checked ~ .slider-content_tendencia_animes{
+    transform: translateX(-200%);
+}
+
+.slider_tendencia_animes > input:nth-child(4):checked ~ .slider-content_tendencia_animes{
     transform: translateX(-300%);
 }
