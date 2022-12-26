@@ -1,6 +1,9 @@
-* {
-    font-family: "Poppins", sans-serif;    
+*{
     text-decoration: none;
+}
+
+.body {
+    font-family: 'Inter', sans-serif;    
 }
 
 .body {
@@ -65,7 +68,7 @@
 }
 
 .titulo {
-    font-family: "Poppins", "Roboto", sans-serif;   
+    font-family: 'Rubik Mono One', sans-serif;
 }
 
 .titulo2 {
@@ -94,7 +97,7 @@
 
 .gradient_font {
 
-    background-image: linear-gradient(to bottom, #063372, #3c79ce, #0747a1);
+    background-image: linear-gradient(to bottom, #0f7921, #258629, #07a121);
     
     background-clip: text;
     -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
@@ -119,6 +122,12 @@
 }
 
 .img_destaques {
+    width: 220px;
+    height: 330px;
+    border-radius: 5px;
+}
+
+.img_tendencias {
     width: 220px;
     height: 330px;
     border-radius: 5px;

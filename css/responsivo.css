@@ -1,3 +1,7 @@
+.margin_auto{
+    margin: auto;
+}
+
 /* Atributos: Fontes */
 
 .font_15 {
@@ -9,6 +13,9 @@
 }
 .font_30 {
     font-size: 30px;
+}
+.font_40 {
+    font-size: 40px;
 }
 .font_60 {
     font-size: 60px;
