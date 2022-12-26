@@ -8,14 +8,24 @@
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/responsivo.css">
         <link rel="stylesheet" href="css/carrosel.css">
+        
     </head>
     <body class="body">
 
-    
+        <header class="header">
+            <section class="flex titulo2 m_40_r m_40_l">
+                <a href="#home" class="logo">FILMESDB</a>
+                <nav class="navbar">
+                    <a href="index.php">Início</a>
+                    <a href="">Filmes</a>
+                    <a href="">Séries</a>                
+                </nav>                
+            </section>
+        </header>
 
         <div class="back_white">        
 
-            <div class="container header">                  
+            <div class="container">                  
 
                 <div class="flex">
                     <div class="container_melhores w_100">

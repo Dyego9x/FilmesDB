@@ -23,6 +23,16 @@
     margin-left: 25%;
 }
 
+/* Atributos: Margin à direita */
+
+.m_20_r {
+    margin-right: 20px;
+}
+
+.m_40_r {
+    margin-right: 40px;
+}
+
 /* Atributos: Margin do topo */
 
 .m_40_t {
