@@ -1,5 +1,9 @@
 /* Atributos: Fontes */
 
+.font_15 {
+    font-size: 15px;
+}
+
 .font_20 {
     font-size: 20px;
 }
@@ -39,6 +43,12 @@
     margin-top: 40px;
 }
 
+/* Atributos: Margin inferior */
+
+.m_20_b {
+    margin-bottom: 20px;
+}
+
 /* Atributos: Largura */
 .w_100 {
     width: 100%;
@@ -54,4 +64,8 @@
 
 .w_40 {
     width: 40%;
+}
+
+.w_30 {
+    width: 30%;
 }

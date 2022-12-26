@@ -2,19 +2,20 @@
 <html>
     <head>
         <meta charset="utf-8">        
-        <title>Filmes DB</title>
+        <title>Mediaflix</title>
         <meta name="description" content="Filmes DB">
         <meta name="viewport" content="width=device-width, initial-scale=1">        
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/responsivo.css">
         <link rel="stylesheet" href="css/carrosel.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
     </head>
     <body class="body">
 
         <header class="header">
             <section class="flex titulo2 m_40_r m_40_l">
-                <a href="#home" class="logo">FILMESDB</a>
+                <a href=""><img class="logo" src="images/logo.jpeg?v1" alt="Mediaflix" title="Mediaflix"></a>
                 <nav class="navbar">
                     <a href="index.php">Início</a>
                     <a href="">Filmes</a>
@@ -23,13 +24,13 @@
             </section>
         </header>
 
-        <div class="back_white">        
+        <div class="back_white m_40_t">        
 
             <div class="container">                  
 
                 <div class="flex">
                     <div class="container_melhores w_100">
-                        <h1>Melhores <b class="azul_padrao">Filmes DB</b></h1>
+                        <h1>Melhores <b class="azul_padrao">Mediaflix</b></h1>
                         
                         <p class="font_30">Veja abaixo os melhores filmes do momento!</p>
 
@@ -89,34 +90,36 @@
                     <div>
                         <p class="font_60 titulo gradient_font"> <strong>Lançamentos Populares</strong></p>
                     </div>
-                    <section class="slider">
-                        <input name='slide' type="radio" >
+                    <section class="slider troca_automatica">
                         <input name='slide' type="radio" checked>
+                        <input name='slide' type="radio" >
                         <input name='slide' type="radio">
                         <input name='slide' type="radio">
                     
-                        <div class="slider-content m_40_t m_25_l_p">
+                        <div class="slider-content m_40_t m_25_l_p sinopse">
+                            <div class="slider-item flex">
+                                <a href=""><img class="img_destaques" src="images/spy.jpg?v1" alt="Wandinha" title="Wandinha"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>SPY×FAMILY (2022)</strong></p>
+                                    <p class="font_15">Há décadas, as nações de Ostania e Westalis promovem uma guerra fria sem fim. Para investigar os movimentos do presidente de um importante partido político, Westalis mobiliza Twilight, seu melhor agente, a montar uma família falsa e se infiltrar nos eventos sociais promovidos pela escola do filho do político. Mas por um acaso do destino, Twilight acaba adotando Anya, uma jovem com poderes telepáticos, e se "casando" com Yor, uma assassina profissional! Sem saberem das identidades uns dos outros, este trio incomum vai embarcar em aventuras cheias de surpresas para garantir a paz mundial.</p>
+                                </div>
+                            </div>
+                            <div class="slider-item flex">
+                                <a href=""><img class="img_destaques" src="images/wan.jpg?v1" alt="Wandinha" title="Wandinha"></a>
+                                <div class="m_40_l w_30">
+                                    <p class="font_20"><strong>Wandinha (2022)</strong></p>
+                                    <p class="font_15">Inteligente, sarcástica e apática, Wandinha Addams pode estar meio morta por dentro, mas na Escola Nunca Mais ela vai fazer amigos, inimigos e investigar assassinatos.</p>
+                                </div>
+                            </div>
                             <div class="slider-item flex">
                                 <a href=""><img class="img_destaques" src="images/teste.jpg?v1" alt="Wandinha" title="Wandinha"></a>
-                                <div class="m_40_l">
+                                <div class="m_40_l w_30">
                                     <p class="font_20"><strong>Wandinha (2022)</strong></p>
                                 </div>
                             </div>
                             <div class="slider-item flex">
                                 <a href=""><img class="img_destaques" src="images/teste.jpg?v1" alt="Wandinha" title="Wandinha"></a>
-                                <div class="m_40_l">
-                                    <p class="font_20"><strong>Wandinha (2022)</strong></p>
-                                </div>
-                            </div>
-                            <div class="slider-item flex">
-                                <a href=""><img class="img_destaques" src="images/teste.jpg?v1" alt="Wandinha" title="Wandinha"></a>
-                                <div class="m_40_l">
-                                    <p class="font_20"><strong>Wandinha (2022)</strong></p>
-                                </div>
-                            </div>
-                            <div class="slider-item flex">
-                                <a href=""><img class="img_destaques" src="images/teste.jpg?v1" alt="Wandinha" title="Wandinha"></a>
-                                <div class="m_40_l">
+                                <div class="m_40_l w_30">
                                     <p class="font_20"><strong>Wandinha (2022)</strong></p>
                                 </div>
                             </div>
@@ -126,7 +129,10 @@
                             
             </div>
 
-        </div>        
+        </div>     
+        <?php
+            include "footer.php";
+        ?>
         
         <script src="" async defer></script>
     </body>
