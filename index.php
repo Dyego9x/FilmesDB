@@ -127,11 +127,6 @@
                     </section>
                 </div> 
 
-
-
-
-
-
                 <div>
                     <p class="font_60 titulo gradient_font"> <strong>Tendências</strong></p>
                 </div>
@@ -151,28 +146,28 @@
                         <input name='slide_tendencia_filmes' type="radio">
                         <input name='slide_tendencia_filmes' type="radio">
                     
-                        <div class="slider-content_tendencia_filmes m_40_t sinopse margin_auto">
+                        <div class="slider-content_tendencia_filmes m_40_t center">
                             <div class="slider-item_tendencia_filmes ">
                                 <a href=""><img class="img_destaques" src="images/filmes/drestranho.jpg?v1" alt="Dr. Estranho" title="Dr. Estranho"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>Doutor Estranho no Multiverso da Loucura (2022)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_filmes ">
                                 <a href=""><img class="img_destaques" src="images/filmes/minions.jpg?v1" alt="Minions 2: A Origem de Gru (2022)" title="Minions 2: A Origem de Gru (2022)"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>Minions 2: A Origem de Gru (2022)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_filmes ">
                                 <a href=""><img class="img_destaques" src="images/filmes/ripd.jpg?v1" alt="R.I.P.D. 2: Rise of the Damned (2022)" title="R.I.P.D. 2: Rise of the Damned (2022)"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>R.I.P.D. 2: Rise of the Damned (2022)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_filmes ">
                                 <a href=""><img class="img_destaques" src="images/adao.jpg?v1" alt="Avatar: O Caminho da Água (2022)" title="Avatar: O Caminho da Água (2022)"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>Avatar: O Caminho da Água (2022)</strong></p>                                    
                                 </div>
                             </div>
@@ -194,28 +189,28 @@
                         <input name='slide_tendencia_series' type="radio">
                         <input name='slide_tendencia_series' type="radio">
                     
-                        <div class="slider-content_tendencia_series m_40_t sinopse margin_auto">
+                        <div class="slider-content_tendencia_series m_40_t">
                             <div class="slider-item_tendencia_series ">
                                 <a href=""><img class="img_destaques" src="images/series/peak.jpg?v1" alt="Peaky Blinders: Sangue, Apostas e Navalhas (2013)" title="Peaky Blinders: Sangue, Apostas e Navalhas (2013)"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>Peaky Blinders: Sangue, Apostas e Navalhas (2013)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_series ">
                                 <a href=""><img class="img_destaques" src="images/series/medicos.jpg?v1" alt="A Anatomia de Grey (2005)" title="A Anatomia de Grey (2005)"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>A Anatomia de Grey (2005)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_series ">
                                 <a href=""><img class="img_destaques" src="images/series/traficante.jpg?v1" alt="Breaking Bad: A Química do Mal (2008)" title="Breaking Bad: A Química do Mal (2008)"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>Breaking Bad: A Química do Mal (2008)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_series ">
                                 <a href=""><img class="img_destaques" src="images/series/dragao.jpg?v1" alt="A Casa do Dragão (2022)" title="A Casa do Dragão (2022)"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>A Casa do Dragão (2022)</strong></p>                                    
                                 </div>
                             </div>
@@ -238,28 +233,28 @@
                         <input name='slide_tendencia_animes' type="radio">
                         <input name='slide_tendencia_animes' type="radio">
                     
-                        <div class="slider-content_tendencia_animes m_40_t sinopse margin_auto">
+                        <div class="slider-content_tendencia_animes m_40_t">
                             <div class="slider-item_tendencia_animes">
                                 <a href=""><img class="img_destaques" src="images/animes/hunter.jpg?v1" alt="Hunter x Hunter (2011)" title="Hunter x Hunter (2011)"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>Hunter x Hunter (2011)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_animes">
                                 <a href=""><img class="img_destaques" src="images/animes/blue.jpg?v1" alt="Blue Lock (2022)" title="Blue Lock (2022)"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>Blue Lock (2022)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_animes">
                                 <a href=""><img class="img_destaques" src="images/animes/dragon.jpg?v1" alt="Super Dragon Ball Heroes (2018)" title="Super Dragon Ball Heroes (2018)"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>Super Dragon Ball Heroes (2018)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_animes">
                                 <a href=""><img class="img_destaques" src="images/animes/motoserra.jpg?v1" alt="Chainsaw Man (2022)" title="Chainsaw Man (2022)"></a>
-                                <div class="m_40_l w_30">
+                                <div class=" w_30">
                                     <p class="font_20"><strong>Chainsaw Man (2022)</strong></p>                                    
                                 </div>
                             </div>
@@ -271,62 +266,7 @@
 
 
                 </div>
-
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <br><br><br><br><br><br><br><br><br>
-                <div class="m_40_t center">
-                    <div>
-                        <p class="font_60 titulo gradient_font"> <strong>Tendências</strong></p>
-                    </div>                    
-                    
-                    <div class="m_40_t flex">
-                        <div class="slider-item center margin_auto">
-                            <a href=""><img class="img_tendencias" src="images/spy.jpg?v1" alt="Wandinha" title="Wandinha"></a>
-                            <div class="">
-                                <p class="font_20"><strong>SPY×FAMILY (2022)</strong></p>                                
-                            </div>
-                        </div>
-                        <div class="slider-item center margin_auto">
-                            <a href=""><img class="img_tendencias" src="images/wan.jpg?v1" alt="Wandinha" title="Wandinha"></a>
-                            <div class="">
-                                <p class="font_20"><strong>Wandinha (2022)</strong></p>                                
-                            </div>
-                        </div>
-                        <div class="slider-item center margin_auto">
-                            <a href=""><img class="img_tendencias" src="images/got.jpg?v1" alt="Wandinha" title="Wandinha"></a>
-                            <div class="">
-                                <p class="font_20"><strong>Game of Thrones (2011)</strong></p>                                
-                            </div>
-                        </div>                        
-                    </div>
-                    
-                </div>         
+                                                                
                             
             </div>
 
