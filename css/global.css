@@ -219,6 +219,11 @@
     border: 1px solid #0FD4FF;   
 }
 
+.buttom_buscar {
+    background-color: rgb(250, 250, 250, 0);
+    border: 1px;    
+}
+
 .sinopse {
     text-align: left;
 }

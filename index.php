@@ -51,13 +51,13 @@
                                     <p class="font_30"><strong>Encontre seu filme</strong></p>
 
                                     <div class="w_80 input flex ">                           
-                                        <div class="city flex">                                    
+                                        <div class="flex">                                    
                                             <input id="nome" name="nome" class="form-control"  placeholder="Digite o nome do filme" type="text" maxlength="200" />
                                         </div>
                                     </div>
 
                                     <div class="w_80 input flex">                           
-                                        <div class="city flex">                                    
+                                        <div class="flex">                                    
                                             <select name="genero">
                                                 <option value="valor1" selected disabled>Escolha o gênero</option>
                                                 <option value="valor2">Ação e aventura</option>
