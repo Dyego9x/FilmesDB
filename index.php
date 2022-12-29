@@ -4,7 +4,8 @@
         <meta charset="utf-8">        
         <title>Mediaflix</title>
         <meta name="description" content="Filmes DB">
-        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <meta name="viewport" content="width=device-width, initial-scale=1">           
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/responsivo.css">
         <link rel="stylesheet" href="css/carrosel.css">
@@ -21,8 +22,7 @@
                 <a href=""><img class="logo" src="images/logo.jpeg?v1" alt="Mediaflix" title="Mediaflix"></a>
                 <nav class="navbar">
                     <a href="index.php">Início</a>
-                    <a href="">Filmes</a>
-                    <a href="">Séries</a>                
+                    <a href="buscar.php">Buscar</a>                                  
                 </nav>                
             </section>
         </header>

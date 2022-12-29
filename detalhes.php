@@ -22,25 +22,15 @@
                 <a href=""><img class="logo" src="images/logo.jpeg?v1" alt="Mediaflix" title="Mediaflix"></a>
                 <nav class="navbar">
                     <a href="index.php">Início</a>
-                    <a href="">Filmes</a>                                  
+                    <a href="buscar.php">Buscar</a>                                
                 </nav>                
             </section>
         </header>
-            
-        <form method="get">
-
-            <div class="input m_100_t flex">
-                <input id="nome_filme" name="nome_filme" class="form-control w_80"  placeholder="Digite o nome do filme" type="text" maxlength="200" />
-
-                <button type="button" class="buttom_buscar" onclick="buscarFilme()"><a><i class="fa fa-search" aria-hidden="true">  Buscar</i></a></button>
-                
-            </div>                          
-
-        </form>  
-        
-        <div class="back_white border_25" id="resultados" name="resultados">
+        <div class="back_white border_25">
             
         </div>
+
+
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>                
         <script>
