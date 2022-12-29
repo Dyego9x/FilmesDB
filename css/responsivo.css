@@ -88,3 +88,7 @@
 .w_20 {
     width: 20%;
 }
+
+.border_25 {
+    border-radius: 25px;
+}

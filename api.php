@@ -21,3 +21,7 @@
     print('<hr>');
     print('<pre>');
     print_r($obj);
+
+    https://image.tmdb.org/t/p/w300/yMiGJ3fgappbDZMWKiiTtiUbEzq.jpg 
+    
+    para pegar imagem

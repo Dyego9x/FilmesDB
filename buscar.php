@@ -34,9 +34,13 @@
 
                 <button type="button" class="buttom_buscar" onclick="buscarFilme()"><a><i class="fa fa-search" aria-hidden="true">  Buscar</i></a></button>
                 
-            </div>
+            </div>                          
 
-        </form>        
+        </form>  
+        
+        <div class="back_white border_25" id="resultados" name="resultados">
+                
+        </div>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>                
         <script>
@@ -48,7 +52,20 @@
                     url: "https://api.themoviedb.org/3/search/movie?query=" + document.getElementById("nome_filme").value + "&api_key=250e1d8eccd16b39d5de9d3e3b18111a&language=pt-BR",                            
                     dataType: 'json',
                     success: function(retorno) {            
-                        console.log(retorno);          
+                        console.log(retorno);  
+                        document.querySelector('#resultados').innerHTML = '<div>Texto aqui!</div>';  
+
+                        $html = '';
+
+                        for(var i=0; i<retorno["results"].length; i++){                            
+
+                            console.log(retorno["results"][i]);                                                        
+
+                            $html += ' <div class="flex back_white border_25" name = "filme'+[i]+'"><a href=""><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="SpyxFamily" title="'+retorno["results"][i]["title"]+'"></a><div class="result_dados"><p class="font_20"><strong>'+retorno["results"][i]["title"]+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+retorno["results"][i]["release_date"]+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p></div></div>';
+
+                        }  
+                        
+                        document.querySelector('#resultados').innerHTML = $html;
                     },
                     error: function() {
                         alert('Erro!');
