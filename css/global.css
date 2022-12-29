@@ -153,6 +153,14 @@
     border: 10px solid transparent;
 }
 
+.result_dados .img_resultado:hover {
+    width: 150px;
+    height: 200px;
+    border-radius: 25px;
+    transition: all .5s;
+    border: 10px solid transparent;
+}
+
 .container {
     padding-right: 15px;
     padding-left: 15px;
