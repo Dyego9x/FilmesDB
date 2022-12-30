@@ -40,7 +40,7 @@
                             <a href=""><img class="imagem_principal" src="images/logo.jpeg?v1" alt="vingadores" title="vingadores"></a>                            
                         </div> -->
                         
-                        <p class="font_30">Milhões de Filmes, Séries e Pessoas para Descobrir. Explore já.</p>
+                        <p class="font_20 w_90">Milhões de Filmes, Séries e Pessoas para Descobrir. Explore já.</p>
 
                     </div>                    
                 </div>   
@@ -108,25 +108,25 @@
                     
                         <div class="slider-content_tendencia_filmes m_40_t center">
                             <div class="slider-item_tendencia_filmes ">
-                                <a href="detalhes.php?tipo=F&id=453395"><img class="img_destaques" src="images/filmes/drestranho.jpg?v1" alt="Dr. Estranho" title="Dr. Estranho"></a>
+                                <a href="detalhes.php?tipo=movie&id=453395"><img class="img_destaques" src="images/filmes/drestranho.jpg?v1" alt="Dr. Estranho" title="Dr. Estranho"></a>
                                 <div class="">
                                     <p class="font_20"><strong>Doutor Estranho no Multiverso da Loucura (2022)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_filmes ">
-                                <a href="detalhes.php?tipo=F&id=438148"><img class="img_destaques" src="images/filmes/minions.jpg?v1" alt="Minions 2: A Origem de Gru (2022)" title="Minions 2: A Origem de Gru (2022)"></a>
+                                <a href="detalhes.php?tipo=movie&id=438148"><img class="img_destaques" src="images/filmes/minions.jpg?v1" alt="Minions 2: A Origem de Gru (2022)" title="Minions 2: A Origem de Gru (2022)"></a>
                                 <div class="">
                                     <p class="font_20"><strong>Minions 2: A Origem de Gru (2022)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_filmes ">
-                                <a href="detalhes.php?tipo=F&id=1013860"><img class="img_destaques" src="images/filmes/ripd.jpg?v1" alt="R.I.P.D. 2: Rise of the Damned (2022)" title="R.I.P.D. 2: Rise of the Damned (2022)"></a>
+                                <a href="detalhes.php?tipo=movie&id=1013860"><img class="img_destaques" src="images/filmes/ripd.jpg?v1" alt="R.I.P.D. 2: Rise of the Damned (2022)" title="R.I.P.D. 2: Rise of the Damned (2022)"></a>
                                 <div class="">
                                     <p class="font_20"><strong>R.I.P.D. 2: Rise of the Damned (2022)</strong></p>                                    
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_filmes ">
-                                <a href="detalhes.php?tipo=F&id=76600"><img class="img_destaques" src="images/adao.jpg?v1" alt="Avatar: O Caminho da Água (2022)" title="Avatar: O Caminho da Água (2022)"></a>
+                                <a href="detalhes.php?tipo=movie&id=76600"><img class="img_destaques" src="images/adao.jpg?v1" alt="Avatar: O Caminho da Água (2022)" title="Avatar: O Caminho da Água (2022)"></a>
                                 <div class="">
                                     <p class="font_20"><strong>Avatar: O Caminho da Água (2022)</strong></p>                                    
                                 </div>

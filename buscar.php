@@ -21,8 +21,7 @@
             <section class="flex titulo2 m_10_r_p m_40_l">
                 <a href=""><img class="logo" src="images/logo.jpeg?v1" alt="Mediaflix" title="Mediaflix"></a>
                 <nav class="navbar">
-                    <a href="index.php">Início</a>
-                    <a href="">Filmes</a>                                  
+                    <a href="index.php">Início</a>                                                  
                 </nav>                
             </section>
         </header>
@@ -91,12 +90,12 @@
 
                             }                                                           
                             
-                            $html += '<div class="flex back_white border_25 result_dados m_10_t" name = "filme'+[i]+'"><a href="detalhes.php?tipo='+retorno["results"][i]["media_type"]+'&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+$nome+'" title="'+$nome+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+$nome+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
+                            $html += '<div class="flex_const back_white border_25 result_dados m_10_t" name = "filme'+[i]+'"><a href="detalhes.php?tipo='+retorno["results"][i]["media_type"]+'&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+$nome+'" title="'+$nome+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+$nome+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
 
                         }  
                         
                         if(retorno["results"].length < 1){
-                            $html += '<div class="flex back_white border_25"><p class="font_15 m_30_l">Não foram encontrados resultados que correspondam aos seus critérios de busca.</p></div>';                    
+                            $html += '<div class="flex_const back_white border_25"><p class="font_15 m_30_l">Não foram encontrados resultados que correspondam aos seus critérios de busca.</p></div>';                    
                         }
 
                         document.querySelector('#resultados').innerHTML = $html;
@@ -145,13 +144,13 @@
                             }
                             
                             if($permissao){
-                                $html += '<div class="flex back_white border_25 result_dados m_10_t" name = "filme'+[i]+'"><a href="detalhes.php?tipo='+retorno["results"][i]["media_type"]+'&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+$nome+'" title="'+$nome+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+$nome+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
+                                $html += '<div class="flex_const back_white border_25 result_dados m_10_t" name = "filme'+[i]+'"><a href="detalhes.php?tipo='+retorno["results"][i]["media_type"]+'&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+$nome+'" title="'+$nome+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+$nome+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
                             }                            
 
                         }  
                         
                         if(retorno["results"].length < 1){
-                            $html += '<div class="flex back_white border_25"><p class="font_15 m_30_l">Não foram encontrados resultados que correspondam aos seus critérios de busca.</p></div>';                    
+                            $html += '<div class="flex_const back_white border_25"><p class="font_15 m_30_l">Não foram encontrados resultados que correspondam aos seus critérios de busca.</p></div>';                    
                         }
 
                         document.querySelector('#resultados').innerHTML = $html;
