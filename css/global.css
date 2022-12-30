@@ -124,14 +124,14 @@
 .img_destaques {
     width: 220px;
     height: 330px;
-    border-radius: 5px;
+    border-radius: 25px;
     transition: all .5s;
     border: 10px solid transparent;
 }
 
 .img_destaques:hover {
     border: 10px solid #0747a1;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 .img_tendencias {
@@ -261,8 +261,7 @@
 
 .result_dados {
     font-family: 'Source Sans Pro', Arial, sans-serif;
-    width: 75%;
-    display: inline-block;
+    width: 75%;    
     white-space: nowrap;
     overflow: hidden !important;
     text-overflow: ellipsis;

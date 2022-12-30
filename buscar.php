@@ -38,9 +38,10 @@
 
         </form>  
         
-        <div class="back_white border_25" id="resultados" name="resultados">
+        <section class="back_white border_25" id="resultados" name="resultados">
+                    
             
-        </div>
+        </section>
 
         <?php
             include "footer.php";
@@ -50,6 +51,8 @@
         <script>
 
             function buscarFilme (){                                                  
+                $html = '';
+                $vazio = 0;
 
                 $.ajax({
                     type: 'GET',
@@ -58,7 +61,7 @@
                     success: function(retorno) {            
                         console.log(retorno);                          
 
-                        $html = '';
+                        
 
                         for(var i=0; i<retorno["results"].length; i++){                            
 
@@ -67,21 +70,57 @@
                             // Estou convertendo a data que vem no padrão americano para o brasileiro
                             $data =  retorno["results"][i]["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
 
-                            $html += '<div class="flex back_white border_25 result_dados" name = "filme'+[i]+'"><a href="detalhes.php?id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+retorno["results"][i]["title"]+'" title="'+retorno["results"][i]["title"]+'"></a><div class="result_dados"><p class="font_20"><strong>'+retorno["results"][i]["title"]+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
+                            $html += '<div class="flex back_white border_25 result_dados m_10_t" name = "filme'+[i]+'"><a href="detalhes.php?tipo=F&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+retorno["results"][i]["title"]+'" title="'+retorno["results"][i]["title"]+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+retorno["results"][i]["title"]+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
 
                         }  
                         
                         if(retorno["results"].length < 1){
-                            $html += '<div class="flex back_white border_25"><p class="font_15 m_30_l">Não foram encontrados resultados que correspondam aos seus critérios de busca.</p></div>';
-                            console.log('Aqui');
+                            $vazio += 1;
                         }
 
                         document.querySelector('#resultados').innerHTML = $html;
+
+                        
                     },
                     error: function() {
                         alert('Erro!');
                     }
                 });
+
+                $.ajax({
+                    type: 'GET',
+                    url: "https://api.themoviedb.org/3/search/tv?query=" + document.getElementById("nome_filme").value + "&api_key=250e1d8eccd16b39d5de9d3e3b18111a&language=pt-BR",                            
+                    dataType: 'json',
+                    success: function(retorno) {            
+                        console.log(retorno);                                                  
+
+                        for(var i=0; i<retorno["results"].length; i++){                            
+
+                            console.log(retorno["results"][i]); 
+                            
+                            // Estou convertendo a data que vem no padrão americano para o brasileiro
+                            $data =  retorno["results"][i]["first_air_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
+
+                            $html += '<div class="flex back_white border_25 result_dados m_10_t" name = "serie'+[i]+'"><a href="detalhes.php?tipo=F&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+retorno["results"][i]["name"]+'" title="'+retorno["results"][i]["name"]+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+retorno["results"][i]["name"]+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
+
+                        }  
+                        
+                        if(retorno["results"].length < 1){
+                            $vazio += 1;
+                        }
+
+                        if($vazio == 2){
+                            $html += '<div class="flex back_white border_25"><p class="font_15 m_30_l">Não foram encontrados resultados que correspondam aos seus critérios de busca.</p></div>';                    
+                        }
+
+                        document.querySelector('#resultados').innerHTML = $html;
+                        
+                    },
+                    error: function() {
+                        alert('Erro!');
+                    }
+                });
+                
             }
         </script>
     </body>

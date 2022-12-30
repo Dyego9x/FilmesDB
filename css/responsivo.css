@@ -50,6 +50,14 @@
 
 /* Atributos: Margin do topo */
 
+.m_10_t {
+    margin-top: 10px;
+}
+
+.m_20_t {
+    margin-top: 20px;
+}
+
 .m_40_t {
     margin-top: 40px;
 }
