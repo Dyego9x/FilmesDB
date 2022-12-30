@@ -15,7 +15,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Rubik+Mono+One&display=swap" rel="stylesheet">
     </head>
-    <body class="body">
+    <body class="body" onload="buscarDetalhes();">
         
         <header class="header">
             <section class="flex titulo2 m_40_r m_40_l">
@@ -26,43 +26,60 @@
                 </nav>                
             </section>
         </header>
-        <div class="back_white border_25">
-            
+
+        <div id="detalhes" name="detalhes">
+
         </div>
+
+
+        <!-- <div class="back_detalhes" style="background-image: url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/jzdnhRhG0dsuYorwvSqPqqnM1cV.jpg');">
+            <div class="efeito_opacity flex">
+                <a href=""><img class="m_100_t m_20_b m_30_l border_25" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/5L2IpMfGFfwOmxNdIJeJtdlz03.jpg" alt="Mediaflix" title="Mediaflix"></a>
+                <div class="m_120_t m_20_b m_30_l">
+                    <p class="font_30"><strong> "+retorno["title"]+" </strong></p>
+                    <p class="font_20"> "+retorno["release_date"]+" - Gênero: "+retorno["runtime"]+" </p>
+                    <p class="font_20"> "+retorno["tagline"]+" </p>
+                    <p class="font_30"><strong> Sinopse</strong></p>
+                    <p class="font_20"> "+retorno["overview"]+" </p>
+                </div>
+                
+            </div>
+            
+        </div> -->
+
+        <?php
+            include "footer.php";
+        ?>
 
 
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>                
         <script>
 
-            function buscarFilme (){                                                  
+            function buscarDetalhes (){     
+                
+                const urlParams = new URLSearchParams(window.location.search);
+                $id = urlParams.get("id") // id do filme                
 
                 $.ajax({
                     type: 'GET',
-                    url: "https://api.themoviedb.org/3/search/movie?query=" + document.getElementById("nome_filme").value + "&api_key=250e1d8eccd16b39d5de9d3e3b18111a&language=pt-BR",                            
+                    url: "https://api.themoviedb.org/3/movie/"+$id+"?api_key=250e1d8eccd16b39d5de9d3e3b18111a&language=pt-BR",                            
                     dataType: 'json',
                     success: function(retorno) {            
                         console.log(retorno);                          
 
                         $html = '';
-
-                        for(var i=0; i<retorno["results"].length; i++){                            
-
-                            console.log(retorno["results"][i]); 
                             
-                            // Estou convertendo a data que vem no padrão americano para o brasileiro
-                            $data =  retorno["results"][i]["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
+                        // Estou convertendo a data que vem no padrão americano para o brasileiro
+                        $data =  retorno["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
 
-                            $html += '<div class="flex back_white border_25 result_dados" name = "filme'+[i]+'"><a href="https://api.themoviedb.org/3/movie/'+retorno["results"][i]["id"]+'?api_key=250e1d8eccd16b39d5de9d3e3b18111a&language=pt-BR"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+retorno["results"][i]["title"]+'" title="'+retorno["results"][i]["title"]+'"></a><div class="result_dados"><p class="font_20"><strong>'+retorno["results"][i]["title"]+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
+                        $html += '<div class="back_detalhes" style="background-image: url("https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'");"><div class="efeito_opacity flex"><a href=""><img class="m_100_t m_20_b m_30_l border_25" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'" alt="Mediaflix" title="Mediaflix"></a><div class="m_120_t m_20_b m_30_l"><p class="font_30"><strong> '+retorno["title"]+' </strong></p><p class="font_20"> '+$data+' - Gênero: '+retorno["runtime"]+' </p><p class="font_20"> '+retorno["tagline"]+' </p><p class="font_30"><strong> Sinopse</strong></p><p class="font_20"> '+retorno["overview"]+' </p></div></div></div>';
 
-                        }  
-                        
-                        if(retorno["results"].length < 1){
-                            $html += '<div class="flex back_white border_25"><p class="font_15 m_30_l">Não foram encontrados resultados que correspondam aos seus critérios de busca.</p></div>';
-                            console.log('Aqui');
-                        }
+                        console.log('https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'');
+                        console.log('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'');
+                                                
 
-                        document.querySelector('#resultados').innerHTML = $html;
+                        document.querySelector('#detalhes').innerHTML = $html;
                     },
                     error: function() {
                         alert('Erro!');

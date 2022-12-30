@@ -41,6 +41,10 @@
         <div class="back_white border_25" id="resultados" name="resultados">
             
         </div>
+
+        <?php
+            include "footer.php";
+        ?>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>                
         <script>
@@ -63,7 +67,7 @@
                             // Estou convertendo a data que vem no padrão americano para o brasileiro
                             $data =  retorno["results"][i]["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
 
-                            $html += '<div class="flex back_white border_25 result_dados" name = "filme'+[i]+'"><a href="https://api.themoviedb.org/3/movie/'+retorno["results"][i]["id"]+'?api_key=250e1d8eccd16b39d5de9d3e3b18111a&language=pt-BR"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+retorno["results"][i]["title"]+'" title="'+retorno["results"][i]["title"]+'"></a><div class="result_dados"><p class="font_20"><strong>'+retorno["results"][i]["title"]+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
+                            $html += '<div class="flex back_white border_25 result_dados" name = "filme'+[i]+'"><a href="detalhes.php?id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+retorno["results"][i]["title"]+'" title="'+retorno["results"][i]["title"]+'"></a><div class="result_dados"><p class="font_20"><strong>'+retorno["results"][i]["title"]+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
 
                         }  
                         

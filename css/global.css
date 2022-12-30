@@ -267,3 +267,9 @@
     overflow: hidden !important;
     text-overflow: ellipsis;
 }
+
+.efeito_opacity {
+    background-image: linear-gradient(to right, rgb(11, 13, 32) calc((50vw - 170px) - 340px), rgba(14, 11, 32, 0.87) 30%, rgba(11, 18, 32, 0.84) 100%);
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    color: #ffffff;
+}
