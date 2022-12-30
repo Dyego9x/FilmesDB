@@ -18,7 +18,7 @@
     <body class="body">
         
         <header class="header">
-            <section class="flex titulo2 m_40_r m_40_l">
+            <section class="flex titulo2 m_10_r_p m_40_l">
                 <a href=""><img class="logo" src="images/logo.jpeg?v1" alt="Mediaflix" title="Mediaflix"></a>
                 <nav class="navbar">
                     <a href="index.php">Início</a>
@@ -37,11 +37,25 @@
             </div>                          
 
         </form>  
-        
-        <section class="back_white border_25" id="resultados" name="resultados">
-                    
-            
-        </section>
+
+        <div class="back_white border_25">
+
+            <div class="flex">
+                <a class="margin_auto"><p>Ação</p></a>
+                <a class="margin_auto"><p>Aventura</p></a>
+                <a class="margin_auto"><p>Comédia</p></a>
+                <a class="margin_auto"><p>Terror</p></a>
+                <a class="margin_auto"><p>Fantasia</p></a>
+                <a class="margin_auto"><p>Suspense</p></a>
+
+            </div>
+
+            <section id="resultados" name="resultados">
+                                
+            </section>
+
+        </div>
+                
 
         <?php
             include "footer.php";
@@ -101,7 +115,7 @@
                             // Estou convertendo a data que vem no padrão americano para o brasileiro
                             $data =  retorno["results"][i]["first_air_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
 
-                            $html += '<div class="flex back_white border_25 result_dados m_10_t" name = "serie'+[i]+'"><a href="detalhes.php?tipo=F&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+retorno["results"][i]["name"]+'" title="'+retorno["results"][i]["name"]+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+retorno["results"][i]["name"]+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
+                            $html += '<div class="flex back_white border_25 result_dados m_10_t" name = "serie'+[i]+'"><a href="detalhes.php?tipo=S&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+retorno["results"][i]["name"]+'" title="'+retorno["results"][i]["name"]+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+retorno["results"][i]["name"]+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
 
                         }  
                         

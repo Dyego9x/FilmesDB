@@ -68,12 +68,9 @@
 }
 
 .titulo {
-    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
 }
 
-.titulo2 {
-    font-family: 'Rubik', sans-serif !important;
-}
 
 #li {
     list-style: none;
@@ -97,7 +94,7 @@
 
 .gradient_font {
 
-    background-image: linear-gradient(to bottom, #0f7921, #258629, #07a121);
+    background-image: linear-gradient(to bottom, #0747a1, #2065c7, #4585df);
     
     background-clip: text;
     -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
@@ -114,7 +111,11 @@
 }
 
 .azul_padrao {
-    color: #0747a1;
+    color: #2E7AEA;
+}
+
+.vermelho_padrao {
+    color: #F64148;
 }
 
 .f_fantasy {

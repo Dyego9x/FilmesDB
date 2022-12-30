@@ -18,7 +18,7 @@
     <body class="body" onload="buscarDetalhes();">
         
         <header class="header">
-            <section class="flex titulo2 m_40_r m_40_l">
+            <section class="flex titulo2 m_10_r_p m_40_l">
                 <a href=""><img class="logo" src="images/logo.jpeg?v1" alt="Mediaflix" title="Mediaflix"></a>
                 <nav class="navbar">
                     <a href="index.php">Início</a>
@@ -30,22 +30,6 @@
         <section id="detalhes" name="detalhes">
 
         </div>
-
-
-        <!-- <div class="back_detalhes" style="background-image: url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/jzdnhRhG0dsuYorwvSqPqqnM1cV.jpg');">
-            <div class="efeito_opacity flex">
-                <a href=""><img class="m_100_t m_20_b m_30_l border_25" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/5L2IpMfGFfwOmxNdIJeJtdlz03.jpg" alt="Mediaflix" title="Mediaflix"></a>
-                <div class="m_120_t m_20_b m_30_l">
-                    <p class="font_30"><strong> "+retorno["title"]+" </strong></p>
-                    <p class="font_20"> "+retorno["release_date"]+" - Gênero: "+retorno["runtime"]+" </p>
-                    <p class="font_20"> "+retorno["tagline"]+" </p>
-                    <p class="font_30"><strong> Sinopse</strong></p>
-                    <p class="font_20"> "+retorno["overview"]+" </p>
-                </div>
-                
-            </div>
-            
-        </div> -->
 
         <?php
             include "footer.php";

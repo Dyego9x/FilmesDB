@@ -18,7 +18,7 @@
     <body class="body">
 
         <header class="header">
-            <section class="flex titulo2 m_40_r m_40_l">
+            <section class="flex titulo2 m_10_r_p m_40_l">
                 <a href=""><img class="logo" src="images/logo.jpeg?v1" alt="Mediaflix" title="Mediaflix"></a>
                 <nav class="navbar">
                     <a href="index.php">Início</a>
@@ -34,11 +34,11 @@
                 <div class="flex">
                     <div class="container_melhores w_100">                        
                         
-                        <p class="font_30"><strong>Bem-Vindo(a) ao <b class="azul_padrao font_40">Mediaflix</b>.</strong></p>                        
+                        <p class="font_30"><strong>Bem-Vindo(a) ao <b class="vermelho_padrao font_40">Media</b><b class="azul_padrao font_40">flix</b>.</strong></p>                        
 
-                        <div class="flex">
+                        <!-- <div class="flex">
                             <a href=""><img class="imagem_principal" src="images/logo.jpeg?v1" alt="vingadores" title="vingadores"></a>                            
-                        </div>
+                        </div> -->
                         
                         <p class="font_30">Milhões de Filmes, Séries e Pessoas para Descobrir. Explore já.</p>
 
@@ -88,7 +88,7 @@
                 </div> 
 
                 <div class="m_100_t">
-                    <p class="font_60 titulo gradient_font"> <strong>Indicações</strong></p>
+                    <p class="font_60 titulo gradient_font center"> <strong>Indicações</strong></p>
                 </div>
                 <div class="m_40_t center flex">
 
