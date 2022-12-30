@@ -46,7 +46,7 @@
                 $id = urlParams.get("id") // id                
                 $tipo = urlParams.get("tipo") // id
 
-                if($tipo == "F"){
+                if($tipo == "movie"){
                     $url = "https://api.themoviedb.org/3/movie/"+$id+"?api_key=250e1d8eccd16b39d5de9d3e3b18111a&language=pt-BR";
 
                     $.ajax({
@@ -61,11 +61,7 @@
                             // Estou convertendo a data que vem no padrão americano para o brasileiro
                             $data =  retorno["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
 
-                            $html += '<div class="back_detalhes" style="background-image: url(\'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'\');"><div class="efeito_opacity flex"><a href=""><img class="m_100_t m_20_b m_30_l border_25" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'" alt="Mediaflix" title="Mediaflix"></a><div class="m_120_t m_20_b m_30_l"><p class="font_30"><strong> '+retorno["title"]+' </strong></p><p class="font_20">Lançamento: '+$data+' - Gênero: '+retorno["runtime"]+' </p><p class="font_20"> '+retorno["tagline"]+' </p><p class="font_30"><strong> Sinopse</strong></p><p class="font_20 m_20_r"> '+retorno["overview"]+' </p></div></div></div>';
-
-                            console.log('https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'');
-                            console.log('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'');
-                                                    
+                            $html += '<div class="back_detalhes" style="background-image: url(\'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'\');"><div class="efeito_opacity flex"><a href=""><img class="m_100_t m_20_b m_30_l border_25" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'" alt="Mediaflix" title="Mediaflix"></a><div class="m_120_t m_20_b m_30_l"><p class="font_30"><strong> '+retorno["title"]+' </strong></p><p class="font_20">Lançamento: '+$data+' - Gênero: '+retorno["runtime"]+' </p><p class="font_20"> '+retorno["tagline"]+' </p><p class="font_30"><strong> Sinopse</strong></p><p class="font_20 m_20_r"> '+retorno["overview"]+' </p></div></div></div>';                                                    
 
                             document.querySelector('#detalhes').innerHTML = $html;
                         },
@@ -89,11 +85,7 @@
                             // Estou convertendo a data que vem no padrão americano para o brasileiro
                             $data =  retorno["first_air_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
 
-                            $html += '<div class="back_detalhes" style="background-image: url(\'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'\');"><div class="efeito_opacity flex"><a href=""><img class="m_100_t m_20_b m_30_l border_25" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'" alt="Mediaflix" title="Mediaflix"></a><div class="m_120_t m_20_b m_30_l"><p class="font_30"><strong> '+retorno["name"]+' </strong></p><p class="font_20">Lançamento: '+$data+' - Gênero:  </p><p class="font_20"> '+retorno["tagline"]+' </p><p class="font_30"><strong> Sinopse</strong></p><p class="font_20 m_20_r"> '+retorno["overview"]+' </p></div></div></div>';
-
-                            console.log('https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'');
-                            console.log('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'');
-                                                    
+                            $html += '<div class="back_detalhes" style="background-image: url(\'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'\');"><div class="efeito_opacity flex"><a href=""><img class="m_100_t m_20_b m_30_l border_25" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'" alt="Mediaflix" title="Mediaflix"></a><div class="m_120_t m_20_b m_30_l"><p class="font_30"><strong> '+retorno["name"]+' </strong></p><p class="font_20">Lançamento: '+$data+' - Gênero:  </p><p class="font_20"> '+retorno["tagline"]+' </p><p class="font_30"><strong> Sinopse</strong></p><p class="font_20 m_20_r"> '+retorno["overview"]+' </p></div></div></div>';                                                    
 
                             document.querySelector('#detalhes').innerHTML = $html;
                         },
