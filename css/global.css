@@ -110,6 +110,10 @@
     background-color: #1A1A1A ;
 }
 
+.border_buttom_azul {
+    border-bottom: 2px solid #4d4e4f;
+}
+
 .azul_padrao {
     color: #2E7AEA;
 }
@@ -272,4 +276,9 @@
     background-image: linear-gradient(to right, rgb(11, 13, 32) calc((50vw - 170px) - 340px), rgba(14, 11, 32, 0.87) 30%, rgba(11, 18, 32, 0.84) 100%);
     font-family: 'Source Sans Pro', Arial, sans-serif;
     color: #ffffff;
+}
+
+.genero_busca:hover {
+    color: #0747a1;
+    font-weight: bold;    
 }

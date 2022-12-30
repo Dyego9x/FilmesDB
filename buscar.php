@@ -40,13 +40,16 @@
 
         <div class="back_white border_25">
 
-            <div class="flex">
-                <a class="margin_auto"><p>Ação</p></a>
-                <a class="margin_auto"><p>Aventura</p></a>
-                <a class="margin_auto"><p>Comédia</p></a>
-                <a class="margin_auto"><p>Terror</p></a>
-                <a class="margin_auto"><p>Fantasia</p></a>
-                <a class="margin_auto"><p>Suspense</p></a>
+            <div class="flex border_buttom_azul">
+                <a class="margin_auto genero_busca active" name="genero" id="genero" onclick="buscarFilme();"><p>Todos</p></a>
+                <a class="margin_auto genero_busca" name="genero" id="genero28" onclick="filtrar(28);"><p>Ação</p></a>
+                <a class="margin_auto genero_busca" name="genero" id="genero12" onclick="filtrar(12);"><p>Aventura</p></a>
+                <a class="margin_auto genero_busca" name="genero" id="genero16" onclick="filtrar(16);"><p>Animação</p></a>
+                <a class="margin_auto genero_busca" name="genero" id="genero35" onclick="filtrar(35);"><p>Comédia</p></a>
+                <a class="margin_auto genero_busca" name="genero" id="genero10762" onclick="filtrar(10762);"><p>kids</p></a>
+                <a class="margin_auto genero_busca" name="genero" id="genero9648" onclick="filtrar(9648);"><p>Mistério</p></a>
+                <a class="margin_auto genero_busca" name="genero" id="genero14" onclick="filtrar(14);"><p>Fantasia</p></a>
+                <a class="margin_auto genero_busca" name="genero" id="genero99" onclick="filtrar(99);"><p>Documentário</p></a>
 
             </div>
 
@@ -86,7 +89,7 @@
                                 $data =  retorno["results"][i]["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3-$2-$1');
                                 $nome =  retorno["results"][i]["title"]
 
-                            }                                                        
+                            }                                                           
                             
                             $html += '<div class="flex back_white border_25 result_dados m_10_t" name = "filme'+[i]+'"><a href="detalhes.php?tipo='+retorno["results"][i]["media_type"]+'&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+$nome+'" title="'+$nome+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+$nome+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
 
@@ -106,6 +109,62 @@
                 });                
                 
             }
+
+            function filtrar ($genero){                                                  
+                $html = '';
+                $vazio = 0;                
+
+                $.ajax({
+                    type: 'GET',
+                    url: "https://api.themoviedb.org/3/search/multi?query=" + document.getElementById("nome_filme").value + "&api_key=250e1d8eccd16b39d5de9d3e3b18111a&language=pt-BR",                            
+                    dataType: 'json',
+                    success: function(retorno) {            
+                        console.log(retorno);                                                  
+
+                        for(var i=0; i<retorno["results"].length; i++){     
+                            
+                            $permissao = false; 
+
+                            console.log(retorno["results"][i]); 
+
+                            if(retorno["results"][i]["media_type"] == "tv"){
+                                $data =  retorno["results"][i]["first_air_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');// Estou convertendo a data que vem no padrão americano para o brasileiro
+                                $nome =  retorno["results"][i]["name"]
+                            }else{
+                                $data =  retorno["results"][i]["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3-$2-$1');
+                                $nome =  retorno["results"][i]["title"]
+
+                            }                               
+                            
+                            for(var y=0; y<retorno["results"][i]["genre_ids"].length; y++){
+                                
+                                if(retorno["results"][i]["genre_ids"][y] == $genero){                                    
+                                    $permissao = true;
+                                }
+
+                            }
+                            
+                            if($permissao){
+                                $html += '<div class="flex back_white border_25 result_dados m_10_t" name = "filme'+[i]+'"><a href="detalhes.php?tipo='+retorno["results"][i]["media_type"]+'&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+$nome+'" title="'+$nome+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+$nome+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
+                            }                            
+
+                        }  
+                        
+                        if(retorno["results"].length < 1){
+                            $html += '<div class="flex back_white border_25"><p class="font_15 m_30_l">Não foram encontrados resultados que correspondam aos seus critérios de busca.</p></div>';                    
+                        }
+
+                        document.querySelector('#resultados').innerHTML = $html;
+
+                        
+                    },
+                    error: function() {
+                        alert('Erro! Tente novamente.');
+                    }
+                });                
+                
+            }
+
         </script>
     </body>
 </html>
