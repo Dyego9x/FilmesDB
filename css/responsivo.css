@@ -213,5 +213,28 @@
         margin-top: 5px;
     }
 
+    .trailer_detalhes{
+        width: 380px;
+        height: 315px;        
+    }
+            
+    
+    .modal .content {
+        background-color: #D3D3D3;
+        margin: 15% auto; 
+        padding: 20px;
+        border-radius: 5px;
+        width: 380px;
+        height: 350px;
+        margin-top: 30%;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        font-family: 'LexendDeca-Regular';
+        color: var(--title);
+    }
+
 
 }
