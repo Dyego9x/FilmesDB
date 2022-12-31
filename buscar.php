@@ -76,6 +76,7 @@
                             $data = ''; 
                             $nome = '';
 
+                            // Verifico se seria uma série "TV" ou filme "movie", pois dependendo de qual for, muda a forma de pegar a data e título de cada um
                             if(retorno["results"][i]["media_type"] == "tv"){
                                 if(retorno["results"][i]["first_air_date"]){
                                     $data =  retorno["results"][i]["first_air_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');// Estou convertendo a data que vem no padrão americano para o brasileiro
@@ -96,6 +97,7 @@
 
                         }  
                         
+                        // Verifico se encontrou algum resultado, para saber se apresento a mensagem de aviso ou os itens encontrados
                         if(retorno["results"].length < 1){
                             $html += '<div class="flex_const back_white border_25"><p class="font_15 m_30_l">Não foram encontrados resultados que correspondam aos seus critérios de busca.</p></div>';                    
                         }else{
@@ -134,6 +136,7 @@
                             $data = ''; 
                             $nome = '';
 
+                            // Verifico se seria uma série "TV" ou filme "movie", pois dependendo de qual for, muda a forma de pegar a data
                             if(retorno["results"][i]["media_type"] == "tv"){
                                 if(retorno["results"][i]["first_air_date"]){
                                     $data =  retorno["results"][i]["first_air_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');// Estou convertendo a data que vem no padrão americano para o brasileiro
@@ -150,6 +153,7 @@
 
                             }                                  
                             
+                            // percorro todos os gêneros do item
                             for(var y=0; y<retorno["results"][i]["genre_ids"].length; y++){
                                 
                                 if(retorno["results"][i]["genre_ids"][y] == $genero){                                    
@@ -158,6 +162,7 @@
 
                             }
                             
+                            // Caso o item tenha o gênero pesquisado vou adicionar ele no html
                             if($permissao){
                                 $html += '<div class="flex_const back_white border_25 result_dados m_10_t" name = "filme'+[i]+'"><a href="detalhes.php?tipo='+retorno["results"][i]["media_type"]+'&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+$nome+'" title="'+$nome+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+$nome+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
                             }                            
