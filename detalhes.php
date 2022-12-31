@@ -29,7 +29,17 @@
 
         <section id="detalhes" name="detalhes">
 
-        </div>
+        </section>
+
+        <div class="modal">            
+            <div class="content">
+                <section id="video" name="video">
+
+                </section>
+                <!-- <iframe class="trailer_detalhes" src="https://www.youtube.com/embed/RbENk4FP0C8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <button type="button" class="m_10_t" onclick="switchModal();">Fechar</button>
+            </div>            
+        </div>              
 
         <?php
             include "footer.php";
@@ -57,13 +67,40 @@
                             console.log(retorno);                          
 
                             $html = '';
+                            $generos = '';
                                 
                             // Estou convertendo a data que vem no padrão americano para o brasileiro
                             $data =  retorno["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
 
-                            $html += '<div class="back_detalhes" style="background-image: url(\'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'\');"><div class="efeito_opacity flex"><a href=""><img class="m_100_t m_20_b m_30_l border_25" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'" alt="Mediaflix" title="Mediaflix"></a><div class="m_120_t m_20_b m_30_l"><p class="font_30"><strong> '+retorno["title"]+' </strong></p><p class="font_20">Lançamento: '+$data+' - Gênero: '+retorno["runtime"]+' </p><p class="font_20"> '+retorno["tagline"]+' </p><p class="font_30"><strong> Sinopse</strong></p><p class="font_20 m_20_r"> '+retorno["overview"]+' </p></div></div></div>';                                                    
+                            for(var i=0; i<retorno["genres"].length; i++){
+                                if(i==0){
+                                    $generos += ''+retorno["genres"][i]["name"];
+                                }else{
+                                    $generos += ','+retorno["genres"][i]["name"];
+                                }
+                                
+                            }
+                            $generos.replace(' - ', '');
+
+                            $html += '<div class="back_detalhes" style="background-image: url(\'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'\');"><div class="efeito_opacity flex"><a href=""><img class="m_100_t m_20_b m_30_l border_25" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'" alt="Mediaflix" title="Mediaflix"></a><div class="m_120_t m_20_b m_30_l"><p class="font_30"><strong> '+retorno["title"]+' </strong></p><p class="font_20">Lançamento: '+$data+'</p><p class="font_20"> Gênero: '+$generos+' </p><p class="font_20"> '+retorno["tagline"]+' </p><p class="font_30"><strong> Sinopse</strong></p><p class="font_20 m_20_r"> '+retorno["overview"]+' </p><a class="modalBtn flex m_10_t" onclick="switchModal();"><img class="border_25" src="images/play.png?v1" alt="Mediaflix" title="Mediaflix"> <p class="font_20 trailer_buttom m_10_l">Ver Trailer</p></a></div></div></div>';                                                    
 
                             document.querySelector('#detalhes').innerHTML = $html;
+
+                            $.ajax({
+                                type: 'GET',
+                                url: 'https://api.themoviedb.org/3/movie/'+retorno["id"]+'/videos?api_key=250e1d8eccd16b39d5de9d3e3b18111a&language=pt-BR',
+                                dataType: 'json',
+                                success: function(retorno) {            
+                                    console.log(retorno);                          
+
+                                    document.querySelector('#video').innerHTML = '<iframe class="trailer_detalhes" src="https://www.youtube.com/embed/'+retorno["results"][0]["key"]+'" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                                    
+                                },
+                                error: function() {
+                                    alert('Erro!');
+                                }
+                            });
+
                         },
                         error: function() {
                             alert('Erro!');
@@ -81,11 +118,22 @@
                             console.log(retorno);                          
 
                             $html = '';
+                            $generos = '';
+
+                            for(var i=0; i<retorno["genres"].length; i++){
+                                if(i==0){
+                                    $generos += ''+retorno["genres"][i]["name"];
+                                }else{
+                                    $generos += ','+retorno["genres"][i]["name"];
+                                }
+                                
+                            }
+                            $generos.replace(' - ', '');
                                 
                             // Estou convertendo a data que vem no padrão americano para o brasileiro
                             $data =  retorno["first_air_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');
 
-                            $html += '<div class="back_detalhes" style="background-image: url(\'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'\');"><div class="efeito_opacity flex"><a href=""><img class="m_100_t m_20_b m_30_l border_25" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'" alt="Mediaflix" title="Mediaflix"></a><div class="m_120_t m_20_b m_30_l"><p class="font_30"><strong> '+retorno["name"]+' </strong></p><p class="font_20">Lançamento: '+$data+' - Gênero:  </p><p class="font_20"> '+retorno["tagline"]+' </p><p class="font_30"><strong> Sinopse</strong></p><p class="font_20 m_20_r"> '+retorno["overview"]+' </p></div></div></div>';                                                    
+                            $html += '<div class="back_detalhes" style="background-image: url(\'https://image.tmdb.org/t/p/w1920_and_h800_multi_faces'+retorno["backdrop_path"]+'\');"><div class="efeito_opacity flex"><a href=""><img class="m_100_t m_20_b m_30_l border_25" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2'+retorno["poster_path"]+'" alt="Mediaflix" title="Mediaflix"></a><div class="m_120_t m_20_b m_30_l"><p class="font_30"><strong> '+retorno["name"]+' </strong></p><p class="font_20">Lançamento: '+$data+' </p><p class="font_20"> Gênero: '+$generos+' </p><p class="font_20"> '+retorno["tagline"]+' </p><p class="font_30"><strong> Sinopse</strong></p><p class="font_20 m_20_r"> '+retorno["overview"]+' </p> <a class="modalBtn flex m_10_t" onclick="switchModal();"><img class="border_25" src="images/play.png?v1" alt="Mediaflix" title="Mediaflix"> <p class="font_20 trailer_buttom m_10_l">Ver Trailer</p></a> </div></div></div>';                                                    
 
                             document.querySelector('#detalhes').innerHTML = $html;
                         },
@@ -97,6 +145,21 @@
                 }
                 
             }
+
+
+            function switchModal () {
+                const modal = document.querySelector('.modal')
+                const actualStyle = modal.style.display
+                if(actualStyle == 'block') {
+                    modal.style.display = 'none'
+                }
+                else {
+                    modal.style.display = 'block'
+                }
+            }
+            
+            
+
         </script>
     </body>
 </html>
