@@ -56,28 +56,28 @@
                     
                         <div class="slider-content m_40_t m_25_l_p sinopse">
                             <div class="slider-item flex">
-                                <a href="detalhes.php?tipo=S&id=120089"><img class="img_destaques" src="images/spy.jpg?v1" alt="SpyxFamily" title="SpyxFamily"></a>
+                                <a href="detalhes.php?tipo=tv&id=120089"><img class="img_destaques" src="images/spy.jpg?v1" alt="SpyxFamily" title="SpyxFamily"></a>
                                 <div class="m_40_l w_30">
                                     <p class="font_20"><strong>SPY×FAMILY (2022)</strong></p>
                                     <p class="font_15">Há décadas, as nações de Ostania e Westalis promovem uma guerra fria sem fim. Para investigar os movimentos do presidente de um importante partido político, Westalis mobiliza Twilight, seu melhor agente, a montar uma família falsa e se infiltrar nos eventos sociais promovidos pela escola do filho do político. Mas por um acaso do destino, Twilight acaba adotando Anya, uma jovem com poderes telepáticos, e se "casando" com Yor, uma assassina profissional! Sem saberem das identidades uns dos outros, este trio incomum vai embarcar em aventuras cheias de surpresas para garantir a paz mundial.</p>
                                 </div>
                             </div>
                             <div class="slider-item flex">
-                                <a href="detalhes.php?tipo=S&id=119051"><img class="img_destaques" src="images/wan.jpg?v1" alt="Wandinha" title="Wandinha"></a>
+                                <a href="detalhes.php?tipo=tv&id=119051"><img class="img_destaques" src="images/wan.jpg?v1" alt="Wandinha" title="Wandinha"></a>
                                 <div class="m_40_l w_30">
                                     <p class="font_20"><strong>Wandinha (2022)</strong></p>
                                     <p class="font_15">Inteligente, sarcástica e apática, Wandinha Addams pode estar meio morta por dentro, mas na Escola Nunca Mais ela vai fazer amigos, inimigos e investigar assassinatos.</p>
                                 </div>
                             </div>
                             <div class="slider-item flex">
-                                <a href="detalhes.php?tipo=S&id=1399"><img class="img_destaques" src="images/got.jpg?v1" alt="Game of Thrones" title="Game of Thrones"></a>
+                                <a href="detalhes.php?tipo=tv&id=1399"><img class="img_destaques" src="images/got.jpg?v1" alt="Game of Thrones" title="Game of Thrones"></a>
                                 <div class="m_40_l w_30">
                                     <p class="font_20"><strong>Game of Thrones (2011)</strong></p>
                                     <p class="font_15">Em uma terra onde os verões podem durar vários anos e o inverno toda uma vida, sete nobres famílias lutam pelo controle da mítica terra de Westeros, dividida depois de uma guerra. Num cenário que lembra a Europa medieval, reis, rainhas, cavaleiros e renegados usam todos os meios possíveis em um jogo político pela disputa do Trono de Ferro, o símbolo do poder absoluto.</p>
                                 </div>
                             </div>
                             <div class="slider-item flex">
-                                <a href="detalhes.php?tipo=F&id=436270"><img class="img_destaques" src="images/adao.jpg?v1" alt="Adão Negro" title="Adão Negro"></a>
+                                <a href="detalhes.php?tipo=movie&id=436270"><img class="img_destaques" src="images/adao.jpg?v1" alt="Adão Negro" title="Adão Negro"></a>
                                 <div class="m_40_l w_30">
                                     <p class="font_20"><strong>Adão Negro (2022)</strong></p>
                                     <p class="font_15">Quase 5.000 anos depois de ter sido concedido com os poderes onipotentes dos deuses egípcios - e de ter sido preso, - Adão Negro se ergue de seu túmulo, pronto para trazer sua justiça ao mundo moderno.</p>
@@ -126,7 +126,7 @@
                                 </div>
                             </div>
                             <div class="slider-item_tendencia_filmes ">
-                                <a href="detalhes.php?tipo=movie&id=76600"><img class="img_destaques" src="images/adao.jpg?v1" alt="Avatar: O Caminho da Água (2022)" title="Avatar: O Caminho da Água (2022)"></a>
+                                <a href="detalhes.php?tipo=movie&id=76600"><img class="img_destaques" src="images/filmes/avatar.jpg?v1" alt="Avatar: O Caminho da Água (2022)" title="Avatar: O Caminho da Água (2022)"></a>
                                 <div class="">
                                     <p class="font_20"><strong>Avatar: O Caminho da Água (2022)</strong></p>                                    
                                 </div>
