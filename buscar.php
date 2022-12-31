@@ -39,18 +39,9 @@
 
         <div class="back_white border_25">
 
-            <div class="flex border_buttom_azul">
-                <a class="margin_auto genero_busca active" name="genero" id="genero" onclick="buscarFilme();"><p>Todos</p></a>
-                <a class="margin_auto genero_busca" name="genero" id="genero28" onclick="filtrar(28);"><p>Ação</p></a>
-                <a class="margin_auto genero_busca" name="genero" id="genero12" onclick="filtrar(12);"><p>Aventura</p></a>
-                <a class="margin_auto genero_busca" name="genero" id="genero16" onclick="filtrar(16);"><p>Animação</p></a>
-                <a class="margin_auto genero_busca" name="genero" id="genero35" onclick="filtrar(35);"><p>Comédia</p></a>
-                <a class="margin_auto genero_busca" name="genero" id="genero10762" onclick="filtrar(10762);"><p>kids</p></a>
-                <a class="margin_auto genero_busca" name="genero" id="genero9648" onclick="filtrar(9648);"><p>Mistério</p></a>
-                <a class="margin_auto genero_busca" name="genero" id="genero14" onclick="filtrar(14);"><p>Fantasia</p></a>
-                <a class="margin_auto genero_busca" name="genero" id="genero99" onclick="filtrar(99);"><p>Documentário</p></a>
+            <section id="filtros" name="filtros">                
 
-            </div>
+            </section>
 
             <section id="resultados" name="resultados">
                                 
@@ -68,6 +59,7 @@
 
             function buscarFilme (){                                                  
                 $html = '';
+                $filtros = '';
                 $vazio = 0;
 
                 $.ajax({
@@ -81,23 +73,36 @@
 
                             console.log(retorno["results"][i]); 
 
-                            if(retorno["results"][i]["media_type"] == "tv"){
-                                $data =  retorno["results"][i]["first_air_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');// Estou convertendo a data que vem no padrão americano para o brasileiro
-                                $nome =  retorno["results"][i]["name"]
-                            }else{
-                                $data =  retorno["results"][i]["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3-$2-$1');
-                                $nome =  retorno["results"][i]["title"]
+                            $data = ''; 
+                            $nome = '';
 
-                            }                                                           
-                            
+                            if(retorno["results"][i]["media_type"] == "tv"){
+                                if(retorno["results"][i]["first_air_date"]){
+                                    $data =  retorno["results"][i]["first_air_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');// Estou convertendo a data que vem no padrão americano para o brasileiro
+                                    $data = $data.replace(/-/g,'/');
+                                }                                
+                                $nome =  retorno["results"][i]["name"];
+                            }
+                            if(retorno["results"][i]["media_type"] == "movie"){
+                                if(retorno["results"][i]["release_date"]){
+                                    $data =  retorno["results"][i]["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3-$2-$1');
+                                    $data = $data.replace(/-/g,'/');
+                                }                                
+                                $nome =  retorno["results"][i]["title"];
+
+                            }                                                                                                                   
+
                             $html += '<div class="flex_const back_white border_25 result_dados m_10_t" name = "filme'+[i]+'"><a href="detalhes.php?tipo='+retorno["results"][i]["media_type"]+'&id='+retorno["results"][i]["id"]+'"><img class="img_resultado" src="https://image.tmdb.org/t/p/w200'+retorno["results"][i]["poster_path"]+'" alt="'+$nome+'" title="'+$nome+'"></a><div class="result_dados m_10_t"><p class="font_20"><strong>'+$nome+'</strong></p><p class="font_15 data_lancamento"><strong>Data Lançamento: </strong>'+$data+'</p><p class="font_15 data_lancamento">'+retorno["results"][i]["overview"]+'</p><p class="font_15"><strong>Nota: </strong>'+retorno["results"][i]["vote_average"]+'</p></div></div>';
 
                         }  
                         
                         if(retorno["results"].length < 1){
                             $html += '<div class="flex_const back_white border_25"><p class="font_15 m_30_l">Não foram encontrados resultados que correspondam aos seus critérios de busca.</p></div>';                    
+                        }else{
+                            $filtros += '<div class="flex border_buttom_azul"><a class="margin_auto genero_busca active" name="genero" id="genero" onclick="buscarFilme();"><p>Todos</p></a><a class="margin_auto genero_busca" name="genero" id="genero28" onclick="filtrar(28);"><p>Ação</p></a><a class="margin_auto genero_busca" name="genero" id="genero12" onclick="filtrar(12);"><p>Aventura</p></a><a class="margin_auto genero_busca" name="genero" id="genero16" onclick="filtrar(16);"><p>Animação</p></a><a class="margin_auto genero_busca" name="genero" id="genero35" onclick="filtrar(35);"><p>Comédia</p></a><a class="margin_auto genero_busca" name="genero" id="genero10762" onclick="filtrar(10762);"><p>kids</p></a><a class="margin_auto genero_busca" name="genero" id="genero9648" onclick="filtrar(9648);"><p>Mistério</p></a><a class="margin_auto genero_busca" name="genero" id="genero14" onclick="filtrar(14);"><p>Fantasia</p></a><a class="margin_auto genero_busca" name="genero" id="genero99" onclick="filtrar(99);"><p>Documentário</p></a></div>';
                         }
 
+                        document.querySelector('#filtros').innerHTML = $filtros;
                         document.querySelector('#resultados').innerHTML = $html;
 
                         
@@ -126,14 +131,24 @@
 
                             console.log(retorno["results"][i]); 
 
-                            if(retorno["results"][i]["media_type"] == "tv"){
-                                $data =  retorno["results"][i]["first_air_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');// Estou convertendo a data que vem no padrão americano para o brasileiro
-                                $nome =  retorno["results"][i]["name"]
-                            }else{
-                                $data =  retorno["results"][i]["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3-$2-$1');
-                                $nome =  retorno["results"][i]["title"]
+                            $data = ''; 
+                            $nome = '';
 
-                            }                               
+                            if(retorno["results"][i]["media_type"] == "tv"){
+                                if(retorno["results"][i]["first_air_date"]){
+                                    $data =  retorno["results"][i]["first_air_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3/$2/$1');// Estou convertendo a data que vem no padrão americano para o brasileiro
+                                    $data = $data.replace(/-/g,'/');
+                                }                                
+                                $nome =  retorno["results"][i]["name"];
+                            }
+                            if(retorno["results"][i]["media_type"] == "movie"){
+                                if(retorno["results"][i]["release_date"]){
+                                    $data =  retorno["results"][i]["release_date"].replace(/(\d*)-(\d*)-(\d*).*/, '$3-$2-$1');
+                                    $data = $data.replace(/-/g,'/');
+                                }                                
+                                $nome =  retorno["results"][i]["title"];
+
+                            }                                  
                             
                             for(var y=0; y<retorno["results"][i]["genre_ids"].length; y++){
                                 
